@@ -9,7 +9,7 @@ if (process.env.JAWSDB_URL) {
     host: "127.0.0.1",
     user: "root",
     password: "",
-    database: "burgers_db"
+    database: "burgersList_db"
   });
 };
 
