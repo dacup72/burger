@@ -12,6 +12,15 @@
 						<input type="submit" value="Add to the list" data-wait="Please wait..." class="button w-button">
 					</form>
 				</div>
+				<div class="wrapper_list">
+					<ul class="unordered-list w-list-unstyled">
+						{{#each burger_data}} {{#unless this.cart}}
+						<li class="list-item">
+
+						</li>
+						{{/unless}} {{/each}}
+					</ul>
+				</div>
 			</div>
 			<div class="column right w-col w-col-6">
 
