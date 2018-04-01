@@ -1,0 +1,23 @@
+.body {
+  height: 100%;
+  background-image: url("../images/back_3x.png");
+  background-position: 50% 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.main {
+  height: 100%;
+}
+
+.main_cont {
+  margin-top: 75px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 1px solid #acacac;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 8px 8px 17px 0 rgba(0, 0, 0, 0.17);
+}
