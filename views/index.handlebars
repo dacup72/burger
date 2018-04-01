@@ -3,11 +3,18 @@
 		<div class="row w-row">
 			<div class="column left w-col w-col-6">
 				<div class="logo_cont">
-                    <img src="/assets/images/Burger_logo_2x.png" width="133" class="image">
-                </div>
+					<img src="/assets/images/Burger_logo_2x.png" width="133" class="image">
+				</div>
+				<div class="form_block w-form">
+					<form id="email-form" name="email-form" data-name="Email Form" action="burgers/create" method="POST">
+						<input type="text" class="text-field w-input" maxlength="256" name="custom_burger" placeholder="Enter your custom burger"
+						 id="custom_burger" value="">
+						<input type="submit" value="Add to the list" data-wait="Please wait..." class="button w-button">
+					</form>
+				</div>
 			</div>
 			<div class="column right w-col w-col-6">
-				
+
 			</div>
 		</div>
 	</div>
