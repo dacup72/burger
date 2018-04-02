@@ -62,6 +62,22 @@
   align-items: center;
 }
 
+.button {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 15px 25px;
+  border-radius: 30px;
+  background-color: #ed3270;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.button.disabled {
+  background-color: #acacac;
+}
+
 .form_block {
   display: -webkit-box;
   display: -webkit-flex;
