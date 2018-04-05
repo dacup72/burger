@@ -16,7 +16,18 @@
 					<ul class="unordered-list w-list-unstyled">
 						{{#each burger_data}} {{#unless this.cart}}
 						<li class="list-item">
-
+							<div class="burger_icon_cont">
+								<img src="/assets/images/burger_icon2x.png" width="29.5">
+							</div>
+							<div class="burger_text">{{this.id}}. {{this.name}}</div>
+							<div class="list_btns_cont">
+								<form method="POST" action="/burgers/delete?_method=DELETE">
+									<input type="hidden" name="burger_id" type="text" value={{this.id}}>
+									<button type="submit" class="list_btn">
+										<span class="icon_sec_btn"></span>Delete</button>
+								</form>
+								
+							</div>
 						</li>
 						{{/unless}} {{/each}}
 					</ul>
