@@ -26,7 +26,13 @@
 									<button type="submit" class="list_btn">
 										<span class="icon_sec_btn"></span>Delete</button>
 								</form>
-								
+								<form method="POST" action="/burgers/update?_method=PUT">
+									<input type="hidden" name="burger_id" type="text" value={{this.id}}>
+									<button type="submit" class="list_btn">
+										<span>
+											<strong class="icon_sec_btn"></strong>
+										</span>Add</button>
+								</form>
 							</div>
 						</li>
 						{{/unless}} {{/each}}
