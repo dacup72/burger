@@ -115,3 +115,9 @@
 .list_btns_cont {
   display: flex;
 }
+
+.wrapper_list {
+  height: 100%;
+  border: 1px solid #acacac;
+  border-radius: 5px;
+}
