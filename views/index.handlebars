@@ -40,7 +40,15 @@
 				</div>
 			</div>
 			<div class="column right w-col w-col-6">
-
+				<div class="wrapper_chekout">
+					<ul class="unordered-list w-list-unstyled">
+						{{#each burgers_data}} {{#if this.cart}}
+						<li class="list-item cart">
+							
+						</li>
+						{{/if}} {{/each}}
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
