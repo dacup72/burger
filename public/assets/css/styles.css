@@ -101,6 +101,21 @@
   margin-top: -70px;
 }
 
+.list-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding: 0px 12px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff0e7;
+}
+
 .column.left {
   border-right: 2px solid #acacac;
 }
