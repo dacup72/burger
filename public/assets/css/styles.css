@@ -100,3 +100,18 @@
 .image {
   margin-top: -70px;
 }
+
+.column.left {
+  border-right: 2px solid #acacac;
+}
+
+.column.right {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.list_btns_cont {
+  display: flex;
+}
