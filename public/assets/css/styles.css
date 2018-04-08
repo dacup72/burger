@@ -136,3 +136,14 @@
   border: 1px solid #acacac;
   border-radius: 5px;
 }
+
+.list-item.cart {
+  background-color: #fff;
+}
+
+.burger_icon_cont {
+  margin-right: 15px;
+  padding: 4px;
+  border-radius: 20px;
+  background-color: #ffc645;
+}
