@@ -47,6 +47,15 @@
 							<div class="burger_icon_cont cart">
 								<img src="/assets/images/burger_icon2x.png" width="29.5">
 							</div>
+							<div class="burger_text">{{this.id}}. {{this.name}}</div>
+							<form method="POST" action="/burgers/updatecart?_method=PUT">
+								<input type="hidden" name="burger_id" type="text" value={{this.id}}>
+								<button type="submit" class="list_btn">
+									<span class="icon_sec_btn">
+										<strong></strong>
+									</span>
+								</button>
+							</form>
 						</li>
 						{{/if}} {{/each}}
 					</ul>
