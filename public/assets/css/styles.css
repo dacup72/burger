@@ -97,7 +97,9 @@
   align-items: stretch;
 }
 
-
+.image {
+  margin-top: -70px;
+}
 
 .list-item {
   display: -webkit-box;
