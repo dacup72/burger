@@ -218,3 +218,26 @@
     min-height: auto;
   }
 }
+
+@media (max-width: 767px) {
+  .button.disabled {
+    margin-top: 29px;
+    margin-bottom: 29px;
+  }
+  .column.left {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #acacac;
+    border-right-style: none;
+  }
+  .column.right {
+    min-height: auto;
+  }
+  .list-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
