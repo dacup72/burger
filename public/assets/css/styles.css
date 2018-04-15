@@ -190,3 +190,31 @@
   margin-left: auto;
 }
 
+
+
+
+
+@media (max-width: 991px) {
+  .body {
+    overflow: scroll;
+    height: auto;
+  }
+  .main {
+    height: auto;
+  }
+  .burger_text {
+    font-size: 16px;
+  }
+  .list-item {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .row {
+    min-height: auto;
+  }
+}
