@@ -97,9 +97,7 @@
   align-items: stretch;
 }
 
-.image {
-  margin-top: -70px;
-}
+
 
 .list-item {
   display: -webkit-box;
@@ -141,6 +139,23 @@
   background-color: #fff;
 }
 
+.row {
+  min-height: 80vh;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.list_btn {
+  padding: 5px;
+  font-family: "Fa 400", sans-serif;
+  color: #ed3270;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: transparent;
+}
+
 .burger_icon_cont {
   margin-right: 15px;
   padding: 4px;
@@ -156,3 +171,4 @@
   margin-bottom: 0px;
   padding: 0px;
 }
+
