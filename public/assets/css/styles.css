@@ -241,3 +241,17 @@
     flex-direction: row;
   }
 }
+
+@media (max-width: 479px) {
+  .body {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .list-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
