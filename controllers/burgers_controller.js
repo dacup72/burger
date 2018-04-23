@@ -13,7 +13,13 @@ router.get("/burgers", function(req, res) {
     order: [
       ["burger_name", "ASC"]
     ]
-  })
+  }).then(function(dbBurger) {
+    // into the main index, updating the page
+      var hbsObject = {
+        burger: dbBurger
+      };
+      return res.render("index", hbsObject);
+    });
 })
 
 
