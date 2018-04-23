@@ -8,13 +8,14 @@ router.get("/", function(req, res) {
 });
 
 router.get("/burgers", function(req, res) {
+	db.Burger.findAll({
+    include: [db.Customer],
+    order: [
+      ["burger_name", "ASC"]
+    ]
+  })
 })
 
-// router.get("/", function(req, res) {
-// 	burger.all(function(burger_data) {
-// 		res.render("index", {burger_data});
-// 	})
-// });
 
 router.put("/burger/update", function(req, res) {
 	burger.update(req.body.burger_id, function(result) {
