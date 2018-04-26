@@ -45,5 +45,10 @@ router.put("/burger/update", function (req, res) {
 router.put("/burgers/update", function(req, res) {
 })
 
+router.put("/burgers/updatecart", function(req, res) {
+});
+
+router.delete("/burgers/delete", function(req, res) {
+});
 
 module.exports = router;
