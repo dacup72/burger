@@ -31,7 +31,7 @@ router.post("/burgers/create", function(req, res) {
   })
     .then(function(dbBurger) {
       // console.log(dbBurger);
-      
+      res.redirect("/");
     });
 });
 
