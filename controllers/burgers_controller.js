@@ -25,14 +25,14 @@ router.get("/burgers", function (req, res) {
 })
 
 // post route to create burgers
-router.post("/burgers/create", function(req, res) {
-  db.Burger.create({
-    burger_name: req.body.burger_name
-  })
-    .then(function(dbBurger) {
-      // console.log(dbBurger);
-      res.redirect("/");
-    });
+router.post("/burgers/create", function (req, res) {
+	db.Burger.create({
+		burger_name: req.body.burger_name
+	})
+		.then(function (dbBurger) {
+			// console.log(dbBurger);
+			res.redirect("/");
+		});
 });
 
 
@@ -42,13 +42,13 @@ router.put("/burger/update", function (req, res) {
 	})
 });
 
-router.put("/burgers/update", function(req, res) {
+router.put("/burgers/update", function (req, res) {
 })
 
-router.put("/burgers/updatecart", function(req, res) {
+router.put("/burgers/updatecart", function (req, res) {
 });
 
-router.delete("/burgers/delete", function(req, res) {
+router.delete("/burgers/delete", function (req, res) {
 });
 
 module.exports = router;
