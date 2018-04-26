@@ -42,10 +42,8 @@ router.put("/burger/update", function (req, res) {
 	})
 });
 
-// router.post("/burger/create", function (req, res) {
-// 	burger.create(req.body.burger_name, function (result) {
-// 		res.redirect('/');
-// 	})
-// })
+router.put("/burgers/update", function(req, res) {
+})
+
 
 module.exports = router;
