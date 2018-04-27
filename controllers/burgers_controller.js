@@ -46,7 +46,18 @@ router.put("/burgers/update", function (req, res) {
 	db.Customer.create({
 		customer: req.body.customer,
 		BurgerId: req.body.burger_id
-	}).then()
+	}).then(function(dbCustomer) {
+		return db.Burger.update({
+			devoured: true
+		}, {
+			where: {
+				id: req.body.burger_id
+			}
+		});
+	})
+	.then(function(dbBurger) {
+		res.json("/");
+	});
 })
 
 router.put("/burgers/updatecart", function (req, res) {
