@@ -36,13 +36,17 @@ router.post("/burgers/create", function (req, res) {
 });
 
 
-router.put("/burger/update", function (req, res) {
-	burger.update(req.body.burger_id, function (result) {
-		res.redirect("/");
-	})
-});
+// router.put("/burger/update", function (req, res) {
+// 	burger.update(req.body.burger_id, function (result) {
+// 		res.redirect("/");
+// 	})
+// });
 
 router.put("/burgers/update", function (req, res) {
+	db.Customer.create({
+		customer: req.body.customer,
+		BurgerId: req.body.burger_id
+	}).then()
 })
 
 router.put("/burgers/updatecart", function (req, res) {
