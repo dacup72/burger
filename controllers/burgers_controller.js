@@ -43,22 +43,39 @@ router.post("/burgers/create", function (req, res) {
 // });
 
 router.put("/burgers/update", function (req, res) {
-	db.Customer.create({
-		customer: req.body.customer,
-		BurgerId: req.body.burger_id
-	}).then(function(dbCustomer) {
-		return db.Burger.update({
+	if (req.body.customer) {
+		db.Customer.create({
+			customer: req.body.customer,
+			BurgerId: req.body.burger_id
+		})
+			.then(function (dbCustomer) {
+				return db.Burger.update({
+					devoured: true
+				}, {
+						where: {
+							id: req.body.burger_id
+						}
+					});
+			})
+			.then(function (dbBurger) {
+				res.json("/");
+			});
+	}
+	// If we aren't given a customer, just update the burger to be devoured
+	else {
+		db.Burger.update({
 			devoured: true
 		}, {
-			where: {
-				id: req.body.burger_id
-			}
-		});
-	})
-	.then(function(dbBurger) {
-		res.json("/");
-	});
-})
+				where: {
+					id: req.body.burger_id
+				}
+			})
+			.then(function (dbBurger) {
+				res.json("/");
+			});
+	}
+});
+
 
 router.put("/burgers/updatecart", function (req, res) {
 });
