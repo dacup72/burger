@@ -7,6 +7,7 @@ router.get("/", function (req, res) {
 	res.redirect("/burgers");
 });
 
+
 router.get("/burgers", function (req, res) {
 	db.Burger.findAll({
 		include: [
@@ -35,12 +36,6 @@ router.post("/burgers/create", function (req, res) {
 		});
 });
 
-
-// router.put("/burger/update", function (req, res) {
-// 	burger.update(req.body.burger_id, function (result) {
-// 		res.redirect("/");
-// 	})
-// });
 
 router.put("/burgers/update", function (req, res) {
 	if (req.body.customer) {
