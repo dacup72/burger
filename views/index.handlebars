@@ -14,12 +14,12 @@
 				</div>
 				<div class="wrapper_list">
 					<ul class="unordered-list w-list-unstyled">
-						{{#each burger_data}} {{#unless this.cart}}
+						{{#each burger}} {{#unless this.devoured}}
 						<li class="list-item">
 							<div class="burger_icon_cont">
 								<img src="/assets/images/burger_icon2x.png" width="29.5">
 							</div>
-							<div class="burger_text">{{this.id}}. {{this.name}}</div>
+							<div class="burger_text">{{this.id}}. {{this.burger_name}}</div>
 							<div class="list_btns_cont">
 								<form method="POST" action="/burgers/delete?_method=DELETE">
 									<input type="hidden" name="burger_id" type="text" value={{this.id}}>
@@ -42,12 +42,17 @@
 			<div class="column right w-col w-col-6">
 				<div class="wrapper_chekout">
 					<ul class="unordered-list w-list-unstyled">
-						{{#each burgers_data}} {{#if this.cart}}
+						{{#each burger}} {{#if this.devoured}}
 						<li class="list-item cart">
 							<div class="burger_icon_cont cart">
 								<img src="/assets/images/burger_icon2x.png" width="29.5">
 							</div>
-							<div class="burger_text">{{this.id}}. {{this.name}}</div>
+							{{#if this.Customer.customer}}
+							<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}  (Eaten by {{this.Customer.customer}})"
+							 readonly> 
+							 {{else}}
+							<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly> {{/if}}
+							<div class="burger_text">{{this.id}}. {{this.burger_name}}</div>
 							<form method="POST" action="/burgers/updatecart?_method=PUT">
 								<input type="hidden" name="burger_id" type="text" value={{this.id}}>
 								<button type="submit" class="list_btn">
