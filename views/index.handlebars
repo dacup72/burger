@@ -51,8 +51,8 @@
 							<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}  (Eaten by {{this.Customer.customer}})"
 							 readonly> 
 							 {{else}}
-							<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly> {{/if}}
 							<div class="burger_text">{{this.id}}. {{this.burger_name}}</div>
+							{{/if}}
 							<form method="POST" action="/burgers/updatecart?_method=PUT">
 								<input type="hidden" name="burger_id" type="text" value={{this.id}}>
 								<button type="submit" class="list_btn">
