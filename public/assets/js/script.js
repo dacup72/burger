@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $(".devour-form").on("submit", function (event) {
+  $(".add_burger_form").on("submit", function (event) {
     event.preventDefault();
 
     var burgerInfo = {
