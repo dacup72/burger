@@ -7,8 +7,8 @@
 				</div>
 				<div class="form_block w-form">
 					<form id="email-form" name="email-form" data-name="Email Form" action="/burgers/create" method="POST">
-						<input type="text" class="text-field w-input" maxlength="256" name="burger_name" placeholder="Enter your custom burger"
-						 id="custom_burger" value="">
+						<input type="text" class="text-field w-input" maxlength="256" name="burger_name" placeholder="Enter your custom burger" id="custom_burger"
+						 value="">
 						<input type="submit" value="Add to the list" data-wait="Please wait..." class="button w-button add_burger_form">
 					</form>
 				</div>
@@ -49,8 +49,7 @@
 							</div>
 							{{#if this.Customer.customer}}
 							<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}  (Eaten by {{this.Customer.customer}})"
-							 readonly> 
-							 {{else}}
+							 readonly> {{else}}
 							<div class="burger_text">{{this.id}}. {{this.burger_name}}</div>
 							{{/if}}
 							<form method="POST" action="/burgers/updatecart?_method=PUT">
