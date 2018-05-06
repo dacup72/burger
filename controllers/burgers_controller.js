@@ -53,6 +53,7 @@ router.put("/burgers/update", function (req, res) {
 					});
 			})
 			.then(function (dbBurger) {
+      
 				res.json("/");
 			});
 	}

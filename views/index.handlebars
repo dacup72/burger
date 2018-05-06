@@ -23,11 +23,12 @@
 							<div class="list_btns_cont">
 								<form method="POST" action="/burgers/delete?_method=DELETE">
 									<input type="hidden" name="burger_id" type="text" value={{this.id}}>
-									<button type="submit" class="list_btn">
+									<button type="submit" class="list_btn" id="deleteSubmit">
 										<span class="icon_sec_btn"></span>Delete</button>
 								</form>
-								<form method="POST" action="/burgers/update?_method=PUT">
-									<input type="hidden" name="burger_id" type="text" value={{this.id}}>
+								<form class="devourSubmit">
+									<input type="hidden" class="burger_id" type="text" value={{this.id}}>
+									<input class="custom-input" type="text" placeholder="Name?">
 									<button type="submit" class="list_btn">
 										<span>
 											<strong class="icon_sec_btn"></strong>
