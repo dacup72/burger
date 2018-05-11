@@ -19,16 +19,16 @@
 							<div class="burger_icon_cont">
 								<img src="/assets/images/burger_icon2x.png" width="29.5">
 							</div>
-							<div class="burger_text">{{this.id}}. {{this.burger_name}}</div>
+							<div class="burger_text_one">{{this.id}}. {{this.burger_name}}</div>
 							<div class="list_btns_cont">
-								<form method="POST" action="/burgers/delete?_method=DELETE">
-									<input type="hidden" name="burger_id" type="text" value={{this.id}}>
-									<button type="submit" class="list_btn" id="deleteSubmit">
+								<form class="deleteBurgerSubmit">
+									<input class="custom-input" type="text" placeholder="Name?">
+									<input type="hidden" class="burger_id" type="text" value={{this.id}}>
+									<button type="submit" class="list_btn">
 										<span class="icon_sec_btn"></span>Delete</button>
 								</form>
 								<form class="devourSubmit">
 									<input type="hidden" class="burger_id" type="text" value={{this.id}}>
-									<input class="custom-input" type="text" placeholder="Name?">
 									<button type="submit" class="list_btn">
 										<span>
 											<strong class="icon_sec_btn"></strong>
@@ -42,6 +42,9 @@
 			</div>
 			<div class="column right w-col w-col-6">
 				<div class="wrapper_chekout">
+					<form class="deleteCartSubmit">
+						<button class="button w-button submit" type="submit">Checkout Cart</button>
+					</form>
 					<ul class="unordered-list w-list-unstyled">
 						{{#each burger}} {{#if this.devoured}}
 						<li class="list-item cart">
@@ -49,12 +52,13 @@
 								<img src="/assets/images/burger_icon2x.png" width="29.5">
 							</div>
 							{{#if this.Customer.customer}}
-							<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}  (Eaten by {{this.Customer.customer}})"
-							 readonly> {{else}}
+							<div class="burger_text">{{this.id}}. {{this.burger_name}} (Added by {{this.Customer.customer}})</div>
+							{{else}}
 							<div class="burger_text">{{this.id}}. {{this.burger_name}}</div>
 							{{/if}}
-							<form method="POST" action="/burgers/updatecart?_method=PUT">
-								<input type="hidden" name="burger_id" type="text" value={{this.id}}>
+							<form class="devourSubmit">
+								<input type="hidden" class="burger_id" type="text" value={{this.id}}>
+								<input type="hidden" class="burger_devoured" type="text" value={{this.devoured}}>
 								<button type="submit" class="list_btn">
 									<span class="icon_sec_btn">
 										<strong></strong>
@@ -65,7 +69,6 @@
 						{{/if}} {{/each}}
 					</ul>
 				</div>
-				<a href="#" class="button disabled w-button">checkout with credits</a>
 			</div>
 		</div>
 	</div>

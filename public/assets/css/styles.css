@@ -12,6 +12,11 @@ body {
   height: 100%;
 }
 
+.custom-input {
+  width: 45%;
+  margin-right: 3px;
+}
+
 .main_cont {
   margin-top: 75px;
   padding-right: 10px;
@@ -54,8 +59,8 @@ body {
   text-transform: uppercase;
 }
 
-.button.disabled {
-  background-color: #acacac;
+.devourSubmit {
+  width: 50%;
 }
 
 .form_block {
@@ -121,6 +126,15 @@ body {
   flex: 1;
   color: #fd863d;
   font-size: 18px;
+  margin-right: 15px;
+}
+
+.burger_text_one {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #fd863d;
+  font-size: 18px;
+  width: 50%;
 }
 
 .list_btns_cont {
@@ -209,9 +223,7 @@ body {
   .main {
     height: auto;
   }
-  .burger_text {
-    font-size: 16px;
-  }
+  
   .list-item {
     padding-top: 13px;
     padding-bottom: 13px;
