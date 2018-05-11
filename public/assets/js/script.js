@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     var burgerInfo = {
       burger_id: $(this).children(".burger_id").val(),
-      customer: $(this).children(".custom-input").val(),
+      customer: $(".custom-input").val(),
       devoured: $(this).children(".burger_devoured").val()
     };
     //console.log("=========================")

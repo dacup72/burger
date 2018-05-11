@@ -54,11 +54,11 @@ router.put("/burgers/update", function (req, res) {
 					});
 			})
 			.then(function (dbBurger) {
-      
+
 				res.json("/");
 			});
 	}
-	else if(req.body.devoured) {
+	else if (req.body.devoured) {
 		db.Burger.update({
 			devoured: false
 		}, {
@@ -89,13 +89,20 @@ router.put("/burgers/update", function (req, res) {
 router.delete("/burgers/deleteCart", function (req, res) {
 
 	db.Burger.destroy({
-			where: {
-				devoured: 1
-			}
-		})
-		.then(function (dbBurger) {
-			res.json("/");
-		});
+		where: {
+			devoured: 1
+		}
+	}).then(function (dbBurger) {
+		console.log("burgers deleted");
+	});
+
+	db.Customer.destroy({
+		where: {},
+		truncate: true
+	}).then(function (dbCustomer) {
+		console.log("all customers deleted");
+		res.json("/");
+	});
 });
 
 router.delete("/burgers/deleteBurger", function (req, res) {
@@ -104,9 +111,9 @@ router.delete("/burgers/deleteBurger", function (req, res) {
 			id: req.body.burger_id
 		}
 	})
-	.then(function (dbBurger) {
-		res.json("/");
-	});
+		.then(function (dbBurger) {
+			res.json("/");
+		});
 });
 
 module.exports = router;
